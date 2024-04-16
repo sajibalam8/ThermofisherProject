@@ -1,0 +1,68 @@
+LIBRARY = 'read.thermofisher.data'
+LOGGER = system.util.getLogger('event-{}'.format(LIBRARY))
+try:
+    with open('E:/robotext.txt', 'r') as file:
+        lines = file.readlines()
+        isFileModified = False
+        # Initialize a list to store the element names
+        element_names = []
+        # Initialize a list to store the average values
+        avg_values = []
+    
+        # Iterate through each line in the file
+        for index, line in enumerate(lines):
+            # Check if the line contains the header for element values (e.g., "C [%]")
+            if "AVG" in line:
+            	# Split the line by whitespace
+            	elements = line.split()
+            	# Exclude the first element as it is "AVG"
+            	elements = elements[1:]
+            	
+            	tagPaths = [
+            		    "[default]CPercentage",
+            		    "[default]MnPercentage",
+            		    "[default]PPercentage",
+            		    "[default]SPercentage",
+            		    "[default]SiPercentage",
+            		    "[default]CuPercentage",
+            		    "[default]AlPercentage",
+            		    "[default]CrPercentage",
+            		    "[default]NiPercentage",
+            		    "[default]MoPercentage",
+            		    "[default]SnPercentage",
+            		    "[default]PbPercentage",
+            		    "[default]TiPercentage",
+            		    "[default]NbPercentage",
+            		    "[default]VPercentage",
+            		    "[default]BPercentage",
+            		    "[default]CaPercentage",
+            		    "[default]NPercentage",
+            		    "[default]TRPercentage",
+            		    "[default]TALPercentage",
+            		    "[default]ALOPercentage"
+            	]
+            		
+            	# Iterate through each element and append its name and value to the corresponding lists
+            	for i, element in enumerate(elements):
+            		if index == 4 and system.tag.read(tagPaths[i]).value != element:
+                		system.tag.write(tagPaths[i], element)
+                		isFileModified = True
+                	if index == 7 and system.tag.read(tagPaths[i + 8]).value != element:
+                	    system.tag.write(tagPaths[i + 8], element)
+                	    isFileModified = True
+                	if index == 10 and system.tag.read(tagPaths[i + 16]).value != element:
+                	    system.tag.write(tagPaths[i + 16], element)
+                	    isFileModified = True
+    
+    if isFileModified == True:     	    
+	    system.db.runNamedQuery("InsertData", 
+	    {"cpercentagevalue":system.tag.read(tagPaths[0]).value, "mnpercentagevalue":system.tag.read(tagPaths[1]).value, "ppercentagevalue":system.tag.read(tagPaths[2]).value, 
+	    "spercentagevalue":system.tag.read(tagPaths[3]).value, "sipercentagevalue":system.tag.read(tagPaths[4]).value, "cupercentagevalue":system.tag.read(tagPaths[5]).value,
+	    "alpercentagevalue":system.tag.read(tagPaths[6]).value, "crpercentagevalue":system.tag.read(tagPaths[7]).value, "nipercentagevalue":system.tag.read(tagPaths[8]).value,
+	    "mopercentagevalue":system.tag.read(tagPaths[9]).value,"snpercentagevalue":system.tag.read(tagPaths[10]).value,"pbpercentagevalue":system.tag.read(tagPaths[11]).value,
+	    "tipercentagevalue":system.tag.read(tagPaths[12]).value,"nbpercentagevalue":system.tag.read(tagPaths[13]).value,"vpercentagevalue":system.tag.read(tagPaths[14]).value,
+	    "bpercentagevalue":system.tag.read(tagPaths[15]).value,"capercentagevalue":system.tag.read(tagPaths[16]).value,"npercentagevalue":system.tag.read(tagPaths[17]).value,
+	    "trpercentagevalue":system.tag.read(tagPaths[18]).value,"talpercentagevalue":system.tag.read(tagPaths[19]).value,"alopercentagevalue":system.tag.read(tagPaths[20]).value})
+                          
+except Exception as e:
+    LOGGER.error("Error occurred")

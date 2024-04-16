@@ -1,0 +1,157 @@
+{
+  "name": "",
+  "tagType": "Provider",
+  "tags": [
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "TiPercentage",
+      "value": "0.00121",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "NbPercentage",
+      "value": "0.02307",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "TRPercentage",
+      "value": "0.06234",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "VPercentage",
+      "value": "0.00252",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "CuPercentage",
+      "value": "0.02408",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "TALPercentage",
+      "value": "0.05378",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "SiPercentage",
+      "value": "0.01831",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "CrPercentage",
+      "value": "0.02417",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "CaPercentage",
+      "value": "0.00021",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "MnPercentage",
+      "value": "0.89972",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "SPercentage",
+      "value": "0.00503",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "MoPercentage",
+      "value": "0.00064",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "SnPercentage",
+      "value": "0.00652",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "AlPercentage",
+      "value": "0.05301",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "BPercentage",
+      "value": "0.00027",
+      "tagType": "AtomicTag"
+    },
+    {
+      "name": "_types_",
+      "tagType": "Folder"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "NPercentage",
+      "value": "0.01096",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "PbPercentage",
+      "value": "0.00028",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "CPercentage",
+      "value": "0.04688",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "PPercentage",
+      "value": "0.00897",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "NiPercentage",
+      "value": "0.00668",
+      "tagType": "AtomicTag"
+    },
+    {
+      "valueSource": "memory",
+      "dataType": "String",
+      "name": "ALOPercentage",
+      "value": "0.00076",
+      "tagType": "AtomicTag"
+    }
+  ]
+}
